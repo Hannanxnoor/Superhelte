@@ -20,7 +20,6 @@ public class Database {
     //public SuperHelt findSuperHelt(){
     // ny superhelt der oprettes som gemmes i en ny superhelt variable
 
-
     // konstrukter
     public Database() {
         SuperHelt hero1 = new SuperHelt("SuperMan", "Clark Kent", false, "flying, super strength, heat vision", 1933, 95);
@@ -38,18 +37,12 @@ public class Database {
         superhelte.add(hero5);
 
 
-
-
-
     }
 
 
-    public void addSuperHero(String superheroname, String name, boolean isHuman, String superpowers, int creationyear, double strength){
-        superhelte.add(new SuperHelt(superheroname,name,isHuman,superpowers,creationyear,strength));
+    public void addSuperHero(String superheroname, String name, boolean isHuman, String superpowers, int creationyear, double strength) {
+        superhelte.add(new SuperHelt(superheroname, name, isHuman, superpowers, creationyear, strength));
     }
-
-
-
 
 
     public SuperHelt findSuperHero(String name) {
@@ -62,13 +55,6 @@ public class Database {
         }
         return null;
     }
-
-
-
-
-
-
-
 
 
 }

@@ -3,12 +3,14 @@ import java.util.Scanner;
 
 public class UserInterFace {
 
+    private Scanner sc = new Scanner(System.in);
+
 
     public void startProgram() {
 
+
         Database db = new Database();
 
-        Scanner sc = new Scanner(System.in);
         System.out.println("Velkommen til superhelte universet");
 
         while (true) {
@@ -45,7 +47,8 @@ public class UserInterFace {
                     System.out.println("Hvad er superheltens superkrafter?");
                     String superpowers = sc.nextLine();
                     System.out.println("Hvad er superhelten opdagelse år?");
-                    int creationyear = sc.nextInt();
+                    int creationyear = readIntger();
+                    //int creationyear = sc.nextInt();
                     sc.nextLine();
                     System.out.println("Hvad er superhelten styrke?");
                     double strenght = sc.nextDouble();
@@ -73,10 +76,25 @@ public class UserInterFace {
                     System.out.println("programmet er nu afslutet");
                     System.exit(1);
                     break;
+
+
             }
 
         }
 
+
     }
+
+    public int readIntger() {
+        while (!sc.hasNextInt()) {
+            String text = sc.next();
+            System.out.println("Ugyldigt indtastning!!!" + " " + "indtast et tal");
+        }
+        int result = sc.nextInt();
+        return result;
+
+    }
+
+
 }
 
