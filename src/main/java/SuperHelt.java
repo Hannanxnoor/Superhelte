@@ -23,6 +23,7 @@ public class SuperHelt {
         this.strength = strength;
     }
 
+
     // Getter metoder
 
     public String getSuperheroname(){
